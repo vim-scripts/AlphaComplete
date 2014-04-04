@@ -1,0 +1,24 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4912
+
+DESCRIPTION
+The built-in insert mode completion i_CTRL-N searches for keywords. When you
+want to complete from fragments of variables (e.g. "frobnicator" from
+"m_frobnicator"), it won't work. Same when you have a keyword prefix before
+your completion base (e.g. "_fro" won't find "frobnicator").
+This plugin offers completion of sequences of alphabetic characters ([A-Za-z],
+/\a), and therefore can complete from text fragments or when there are
+non-alphabetic keyword characters in front of the completion base.
+
+SEE ALSO
+- Check out the CompleteHelper.vim plugin page (vimscript #3914) for a full
+  list of insert mode completions powered by it.
+
+USAGE
+In insert mode, invoke the alphabetic completion via CTRL-X a
+You can then search forward and backward via CTRL-N / CTRL-P, as usual.
+
+CTRL-X a                Find matches for whole fragments of alphabetic
+                        characters.
+                        Further use of CTRL-X a will copy the text including
+                        the next alphabetic fragments following the previous
+                        expansion in other contexts.
